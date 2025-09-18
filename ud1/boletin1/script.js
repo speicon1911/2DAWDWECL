@@ -32,3 +32,10 @@ function muestra_n_en_distintas_bases(num){
     var numDecimal = num.toString(2);
     console.log("El número " + num + " en binario es: " + numDecimal);
 }
+
+// Ejercicio 6
+function divide_entre_0(num){
+    var resultado = num / 0;
+    var resultado2 = resultado + num;
+    console.log("El resultado es: " + resultado2);
+}
