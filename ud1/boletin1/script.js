@@ -92,5 +92,52 @@ function contar_y_temporizar() {
     let endTime = new Date();
 
     console.log("Valor: ", valor);
-    console.log("El algoritmo ha tardado: " + ((endTime - initTime)/1000) + " segundos");
+    console.log("El algoritmo ha tardado: " + ((endTime - initTime) / 1000) + " segundos");
+}
+
+// Ejercicio 13
+function muestra_error() {
+    console.error("Error!. No se ha encontrado ningun valor");
+}
+
+// Ejercicio 14
+function confirma_eliminacion() {
+    window.confirm("¿Estas seguro de eliminar?");
+}
+
+// Ejercicio 15
+function pedir_datos() {
+    let seguir = true;
+    while (seguir) {
+        let nombre = prompt("Introduzca su nombre: ");
+        console.log("Hola, " + nombre);
+        seguir = confirm("¿Desea continuar en el programa?");
+        console.log("El usuario ha decidido continuar en el programa? ", seguir); // confirm devuelve un valor boolean en funcion de la respuesta
+    }
+    console.log("Fin del programa");
+}
+
+// Ejercicio 16
+function pedir_datos_v2() {
+    /* let nombre = window.prompt("¿Cuál es tu nombre?");
+     let edad = Number(window.prompt("¿Cuál es tu edad?"));
+     let ciudad = window.prompt("¿Cuál es tu ciudad?");
+     let direccion = window.prompt("¿Cuál es tu dirección?");
+     let telefono = Number(window.prompt("¿Cuál es tu teléfono?"));
+ 
+     if ((Math.pow(edad, 5) === telefono) || ciudad.toUpperCase === "Mairena del Alcor".toUpperCase) {
+         console.log("Enhorabuena, eres de Mairena del Alcor o tu teléfono es igual a 5 elevado a tu edad");
+     } else {
+         console.log("Lo siento, no eres de Mairena del Alcor y/0 tu teléfono es igual a 5 elevado a tu edad");
+     } esto es con prompt y boton
+     */
+    let nombre = document.getElementById("nombre").value;
+    let edad = Number(document.getElementById("edad").value);
+    let ciudad = document.getElementById("ciudad").value;
+    let direccion = document.getElementById("direccion").value;
+    let telefono = Number(document.getElementById("telefono").value);
+
+    if ((Math.pow(edad, 5) === telefono || ciudad.toUpperCase() === "Mairena del Alcor".toUpperCase())) {
+        console.log("Enhorabuena, eres de Mairena del Alcor o tu teléfono es igual a 5 elevado a tu edad");
+    }
 }
