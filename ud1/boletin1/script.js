@@ -141,3 +141,17 @@ function pedir_datos_v2() {
         console.log("Enhorabuena, eres de Mairena del Alcor o tu teléfono es igual a 5 elevado a tu edad");
     }
 }
+
+// Ejercicio 17
+function cuenta_cifras() {
+    let numero = Math.abs(prompt("Introduce un número: "));
+    let cifras = 0;
+
+    while(numero >= 1){
+        cifras++;
+        numero = Math.floor(numero / 10);
+    }
+
+    console.log("El número tiene " + cifras + " cifras.");
+
+}
