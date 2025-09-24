@@ -191,4 +191,31 @@ function pintar_mensaje(mensaje, isOk) {
 }
 
 // Ejercicio 19
+function acierta_aleatorio() {
+    const aleat = (Math.floor(Math.random() * 10) + 1);
+    let intento = 0;
 
+    alert("Se ha calculado un numero aleatorio. ¿Eres capaz de acertarlo?");
+
+    do {
+        intento++;
+        var valor_intento = Number(prompt("Intento " + intento));
+    } while (valor_intento != aleat);
+
+    console.log("Enhorabuena! has acertado. El numero secreto era el " + aleat);
+    console.log("Has necesitado " + intento + " intentos");
+}
+
+// Ejercicio 20
+function imprime_multiplos() {
+    let n = Number(prompt("Introduce un numero"))
+    let multiplos = 0;
+    const max = 100;
+    for (let i = n; i < max; i++) {
+        if (i % n == 0) {
+            multiplos++;
+            console.log("Multiplo encontrado " + i);
+        }
+    }
+    console.log("El numero " + n + " tiene " + multiplos + " multiplos");
+}
