@@ -147,7 +147,7 @@ function cuenta_cifras() {
     let numero = Math.abs(prompt("Introduce un número: "));
     let cifras = 0;
 
-    while(numero >= 1){
+    while (numero >= 1) {
         cifras++;
         numero = Math.floor(numero / 10);
     }
@@ -155,3 +155,40 @@ function cuenta_cifras() {
     console.log("El número tiene " + cifras + " cifras.");
 
 }
+
+// Ejercicio 18
+
+function calcula_edad() {
+    let edad = document.getElementById("edad").value;
+
+    switch (true) {
+        case edad >= 0 && edad <= 16:
+            pintar_mensaje("Eres un niño", true);
+            break;
+        case edad > 16 && edad <= 25:
+            pintar_mensaje("Eres un joven", true);
+            break;
+        case edad > 25 && edad <= 60:
+            pintar_mensaje("Eres un adulto", true);
+            break;
+        case edad > 60:
+            pintar_mensaje("Eres un senio", true);
+            break;
+        default:
+            pintar_mensaje("Edad no valida", false);
+            break;
+    }
+
+}
+function pintar_mensaje(mensaje, isOk) {
+    let aviso = document.getElementById("aviso");
+    aviso.textContent = mensaje;
+    if (isOk) {
+        aviso.style.color = "green"
+    } else {
+        aviso.style.color = "red"
+    }
+}
+
+// Ejercicio 19
+
