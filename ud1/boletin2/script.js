@@ -10,6 +10,7 @@ window.onload = function () {
     }
 }
 
+// Ejercicio 0
 function calcular_fibonacci() {
     let num = Number(prompt("Introduce un numero"));
     console.log("El valor fib(" + num + ") es: " + fibonacci(num));
@@ -55,4 +56,35 @@ function factorial_tradicional(num) {
         factorial *= i;
     }
     return factorial;
+}
+
+// Ejercicio 2
+function transformar_dias_horas() {
+    let num_dias = Number(prompt("Introduce un numero de dias: "));
+    const horas = num_dias * 24;
+    const minutos = horas * 60;
+    const segundos = minutos * 60;
+    console.log(num_dias + " dias son " + horas + " horas");
+    console.log(num_dias + " dias son " + minutos + " minutos");
+    console.log(num_dias + " dias son " + segundos + " segundos");
+
+}
+
+// Ejercicio 3
+function calcular_ec_2grado(){
+    let a = Number(prompt("Introduce el valor de a: "));
+    let b = Number(prompt("Introduce el valor de b: "));
+    let c = Number(prompt("Introduce el valor de c: "));
+
+    let delta = Math.pow(b,2) - 4*a*c;
+    if (delta < 0){
+        console.log("La ecuacion no tiene solucion real");
+    }else if( delta == 0){
+        let resultado = (-b / 2*a).toFixed(2);
+        console.log("La solucion de " + a+ "x^2 + " + b + "x + " + c + " = 0 es (" + + ")");
+    }else{
+        let resultado1 = (-b + Math.sqrt(delta) /(2*a)).toFixed(2);
+        let resultado2 = (-b - Math.sqrt(delta) /(2*a)).toFixed(2);
+        console.log("La solucion de " + a + "x^2 + " + b + "x + " + c + " = 0 es: (" + resultado1 + ", " + resultado2) + ")";
+    }
 }
