@@ -28,17 +28,31 @@ function fibonacci(num) {
     return resultado;
 }
 
-function calcular_factorial() {
+function calcular_factorial(isRec) {
     let num = Number(prompt("Introduce un numero"));
-    console.log("El valor fact(" + num + ") es: " + factorial(num));
+    let resultado;
+    if (isRec) {
+        resultado = factorial_recursiva(num);
+    } else {
+        resultado = factorial_tradicional(num);
+    }
+    console.log("El valor fact(" + num + ") es: " + resultado);
 }
 
-function factorial(num) {
+function factorial_recursiva(num) {
     let resultado;
     if (num === 1) {
         resultado = 1;
     } else {
-        resultado = num * factorial(num - 1);
+        resultado = num * factorial_recursiva(num - 1);
     }
     return resultado;
+}
+
+function factorial_tradicional(num) {
+    let factorial = 1;
+    for (let i = 1; i <= num; i++) {
+        factorial *= i;
+    }
+    return factorial;
 }
