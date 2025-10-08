@@ -51,7 +51,7 @@ function pinta_triangulo() {
 // Ejercicio 3
 function mostrar_menu() {
     var numeros = [];
-
+    let numero;
     do {
         var opt = prompt("Seleciona una opcion: \n a) Introducir nuevo numero. \n b) Calcular maximo. \n c) Calcular minimo \n d) Calcular media. \n e) Salir.");
         switch (opt.toLowerCase()) {
@@ -75,10 +75,11 @@ function mostrar_menu() {
         }
     } while (opt.toLowerCase() != 'e' && opt != null)
 
-    function introducir_numero(){
+    function introducir_numero(numeros){
         do{
-            numeros = Number(prompt("Introduce numero: "));
-        }while(numeros != 'a');
+            numero = Number(prompt("Introduce numero: "));
+            numero = numeros;
+        }while(numero = null);
 
     }
 }
